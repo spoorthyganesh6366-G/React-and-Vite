@@ -1,0 +1,275 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #fffaff;
+  color: #30243b;
+}
+
+.app {
+  width: 100%;
+  overflow: hidden;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 9%;
+  background: #fffaff;
+}
+
+.navbar h2 {
+  font-size: 28px;
+  color: #7651a8;
+}
+
+.navbar h2 span,
+.hero h1 span,
+.gallery-section h2 span,
+.about h2 span {
+  color: #d47eae;
+}
+
+.navbar a {
+  color: #7651a8;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hero {
+  min-height: 470px;
+  padding: 110px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #f0e6ff, #ffe9f4);
+}
+
+.eyebrow {
+  color: #a16bb5;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 7vw, 68px);
+  margin: 18px 0;
+}
+
+.hero-text {
+  max-width: 570px;
+  margin: auto;
+  color: #76677f;
+  line-height: 1.9;
+}
+
+.explore-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 13px 28px;
+  border-radius: 30px;
+  background: #8d68b5;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.explore-btn:hover {
+  background: #d47eae;
+  transform: translateY(-3px);
+}
+
+.gallery-section {
+  padding: 90px 9%;
+  text-align: center;
+}
+
+.gallery-section h2,
+.about h2 {
+  font-size: 38px;
+  margin: 12px 0;
+}
+
+.section-text {
+  color: #8b7e91;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 35px 0;
+}
+
+.filters button {
+  padding: 10px 20px;
+  border: 1px solid #dfcce9;
+  border-radius: 25px;
+  background: white;
+  color: #7651a8;
+  cursor: pointer;
+  font-family: inherit;
+  transition: 0.3s;
+}
+
+.filters button.active,
+.filters button:hover {
+  background: #8d68b5;
+  color: white;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.interest-card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  text-align: left;
+  box-shadow: 0 8px 25px #7651a812;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.interest-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px #7651a825;
+}
+
+.interest-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content p,
+.modal-content p {
+  color: #bd75a7;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.card-content h3 {
+  margin: 8px 0;
+  font-size: 21px;
+}
+
+.card-content span {
+  color: #8b7e91;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.about {
+  padding: 85px 20px;
+  text-align: center;
+  background: #f4ebfa;
+}
+
+.about > p:last-child {
+  max-width: 650px;
+  margin: 20px auto 0;
+  color: #76677f;
+  line-height: 1.9;
+}
+
+footer {
+  padding: 25px;
+  text-align: center;
+  background: #30243b;
+  color: white;
+  font-size: 13px;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: #21172bcc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  z-index: 10;
+}
+
+.modal-content {
+  position: relative;
+  background: white;
+  padding: 22px;
+  border-radius: 18px;
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+}
+
+.modal-content img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.modal-content h2 {
+  margin: 8px 0;
+}
+
+.modal-content span {
+  color: #76677f;
+  font-size: 14px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 28px;
+  right: 30px;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 23px;
+  cursor: pointer;
+  background: white;
+}
+
+@media (max-width: 850px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-section {
+    padding: 65px 6%;
+  }
+
+  .hero {
+    padding: 90px 20px;
+  }
+
+  .gallery-section h2,
+  .about h2 {
+    font-size: 30px;
+  }
+}
